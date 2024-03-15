@@ -16,11 +16,11 @@ const chartDescriptions = [
     { selector: '#scatterplot2', text: 'In a Scatterplot comparing Surveillance Cameras in a Country Per 1000 people vs the Crime Index, We can see that there is a correlation coefficient -0.41. This shows that there is a minimal negative correlation. The more cameras there are for 1000 people in a population does not imply the less crime rates.'},
     { selector: '#scatterplot', text: 'However, When we look at a scatterplot comparing Surveillance Cameras per 1000 people vs a country\'s overall happiness. We can see that there is little to no correlation at all. '},
     { selector: '#scatterplot_outlier', text: 'When we include the outliers of the previous data, we find that there is almost no correlation at all, which conclude that the more of the surveillance cameras does not increase the citizens level of happiness. '},
-    { selector: "scatterplot3", text: 'When we look at data comparing Surveillance Cameras per sq Mile vs the Crime Index, we can see that their is a -0.34 negative correlation coefficient. However, the coefficient is closer to 0 instead of -1, this reinforces our conlusion that there\’s minimal or even no actual correlation between higher CCTV rates and a lower crime index.'},
+    { selector: "scatterplot3", text: 'When we look at data comparing Surveillance Cameras per sq Mile vs the Crime Index, we can see that there is a -0.1 negative correlation coefficient. However, the coefficient is closer to 0 instead of -1, this shows that there\’s actually a minimal correlation between higher CCTV rates and a lower crime index.'},
     { selector: '#heatmap', text: 'What does crime even look like? What is responsible for the data that is used to calculate the crime index? While we can’t show everyone what Crime looks like on a global scale. We have information on this heat map that displays the type of crime that occurs in specific states of America. ' },
     { selector: '#sankey', text: 'This is a Sankey Chart that can be used to show the flow from the Happiness Index ->   The Number of Surveillance Cameras -> Crime Index -> Country Name.' },
     { selector: '#india', text: 'When we look at crime indexes at a country level, take India for example, we can see very clearly that the two of these cities in the country have different crime indexes. Idore has a much higher crime index than Thrissur. However, Idore with a much higher crime rate has a much higher value of cameras per Square Mile of 62 compared to Thrissur’s value of 0.08 cameras per Square Mile. Additionally, Idore in general has more cameras in their city. Idore has around 200,600 cameras compared to Thrissur’s 269 cameras.' },
-    { selector: '#brazil', text: 'When we look at specific cities in Brazil and compare the crime index between cities Brasilia and Rio de Janeiro, we see something similar to our findings with India. Although the city Rio de Janeiro has an overall crime index of 77.5, the city has a pretty significant amount of surveillance cameras with a value of 3.34 cameras per 1,000 people, and a total of 45,571 cameras in the city. When we compare this to the city Brasilia with a crime index of 60.23, Brasilia has only 0.8 cameras per 1,000 people and a small total of 3,832 surveillance cameras. This again supports our conlusion. ' },
+    { selector: '#brazil', text: 'When we look at specific cities in Brazil and compare the crime index between cities Brasilia and Rio de Janeiro, we see something similar to our findings with India. Although the city Rio de Janeiro has an overall crime index of 77.5, the city has a pretty significant amount of surveillance cameras with a value of 3.34 cameras per 1,000 people, and a total of 45,571 cameras in the city. When we compare this to the city Brasilia with a crime index of 60.23, Brasilia has only 0.8 cameras per 1,000 people and a small total of 3,832 surveillance cameras. This reinforces our conlusion. ' },
     { selector: '#end', text: 'END: ' }
 
 ];
@@ -81,7 +81,8 @@ createTable();
 drawBarChart("Cameras_V_Crime2.csv");
 drawBarChart2("Cameras_V_Crime2.csv");
 drawScatterPlot2('Cameras_V_Crime2.csv');
-drawScatterPlot3('Cameras_V_Crime_outliers.csv')
+// drawScatterPlot3('Cameras_V_Crime_outliers.csv')
+drawScatterPlot3('Cameras_V_Crime2.csv')
 drawHeatMap();
 drawSankeyChart();
 drawScatterPlot('condensed_CCTV_Happiness_2015.csv');
