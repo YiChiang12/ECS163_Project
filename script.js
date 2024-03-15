@@ -15,7 +15,7 @@ const chartDescriptions = [
     { selector: '#chart2', text: 'This is a Bar Graph that shows the Crime Index for every city in our dataset.' },
     { selector: '#scatterplot2', text: 'In a Scatterplot comparing Surveillance Cameras in a Country Per 1000 people vs the Crime Index, We can see that there is a correlation coefficient -0.41. This shows that there is a minimal negative correlation. The more cameras there are for 1000 people in a population does not imply the less crime rates.'},
     { selector: '#scatterplot', text: 'However, When we look at a scatterplot comparing Surveillance Cameras per 1000 people vs a country\'s overall happiness. We can see that there is little to no correlation at all. '},
-    { selector: '#scatterplot_outlier', text: 'When we include the outliers of the previous data, we find that there is almost no correlation at all, which conclude that the more of the surveillance cameras does not increase the citizens level of happiness'},
+    { selector: '#scatterplot_outlier', text: 'When we include the outliers of the previous data, we find that there is almost no correlation at all, which conclude that the more of the surveillance cameras does not increase the citizens level of happiness. '},
     { selector: "scatterplot3", text: 'When we look at data comparing Surveillance Cameras per sq Mile vs the Crime Index, we can see that their is a -0.34 negative correlation coefficient. However, the coefficient is closer to 0 instead of -1, this reinforces our conlusion that there\’s minimal or even no actual correlation between higher CCTV rates and a lower crime index.'},
     { selector: '#heatmap', text: 'What does crime even look like? What is responsible for the data that is used to calculate the crime index? While we can’t show everyone what Crime looks like on a global scale. We have information on this heat map that displays the type of crime that occurs in specific states of America. ' },
     { selector: '#sankey', text: 'This is a Sankey Chart that can be used to show the flow from the Happiness Index ->   The Number of Surveillance Cameras -> Crime Index -> Country Name.' },
@@ -1356,15 +1356,12 @@ function drawEnd() {
 // Add multiple tspan elements for multi-line text
     textConcluding.selectAll("tspan.text-part")
         .data([
-            "Based on our results, we can see that there are multiple correlations (although minor) that suggest surveillance cameras have positive impacts on both the crime index",
-            "in specific countries/cities and people’s overall happiness index.\n",
-            "                             ",
-            "However, our findings as mentioned show correlation of values less than |0.5|. It wouldn’t be responsible to come to the conclusion that surveillance cameras completely shut down crime.",
+            "Based on our results, we can see that all of the correlation of values are less than |0.5|. It shows that there is a minimal correlation or even no correlation between surveillance cameras and crime rates.",
             "We saw examples from India and Brazil that further prove this point.\n",
             
-            "For these reasons, should businesses be allowed to have security cameras exempted from taxes? We aren’t sure if there is any benefit.",
-             "As a result, we should focus on more effective and sustainable solutions, whether it be city-based planning, investment in law enforcement, or social cohesion. By working together,",
-             "we can create a safer society for all of us!",
+            "Since there is no actual evidence that more cameras make our society safer, ",
+            "what is the purpose of installing more new surveillance cameras? ",
+            "Is it really worth taxpayers' dollars to install cameras that don’t actually lead to a safer society? "
         ])
         .enter()
         .append("tspan")
